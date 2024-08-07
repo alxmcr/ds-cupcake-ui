@@ -1,15 +1,21 @@
 {
-  "name": "ds-cupcake-ui",
+  "name": "@alxmcr/ds-cupcake-ui",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prettier": "npx prettier src --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "lint": "npx eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "typescript:check": "npx tsc --noEmit",
+    "format": "npm run typescript:check && npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
+    "prettier": "^3.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -17,13 +23,33 @@
     "@types/node": "^22.1.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.15.0",
-    "@typescript-eslint/parser": "^7.15.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "@typescript-eslint/parser": "^8.0.1",
     "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "typescript": "^5.2.2",
     "vite": "^5.3.4"
-  }
+  },
+  "description": "TA design system for a fintech startup that is changing the world.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alxmcr/ds-cupcake-ui.git"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "storybook",
+    "design-systems",
+    "ui-components"
+  ],
+  "author": "Alejandro M. Coca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alxmcr/ds-cupcake-ui/issues"
+  },
+  "homepage": "https://github.com/alxmcr/ds-cupcake-ui#readme"
 }

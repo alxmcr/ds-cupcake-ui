@@ -65,7 +65,7 @@
     "ui-components"
   ],
   "author": "Alejandro M. Coca",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/alxmcr/ds-cupcake-ui/issues"
   },

@@ -52,7 +52,6 @@
     "vite": "^5.3.4"
   },
   "description": "TA design system for a fintech startup that is changing the world.",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alxmcr/ds-cupcake-ui.git"

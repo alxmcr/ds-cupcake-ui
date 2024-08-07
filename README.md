@@ -1,30 +1,149 @@
-# React + TypeScript + Vite
+# Cupcake UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A design system for a fintech startup that is changing the world.
 
-Currently, two official plugins are available:
+![Banner](https://cupcake-ui-front.netlify.app/banners/01-cupcake-ui-banner.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Screenshots
 
-## Expanding the ESLint configuration
+- Storybook home page
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![Storybook home page](https://cupcake-ui-front.netlify.app/screenshots-storybook/01-storybook-home-page.png)
 
-- Configure the top-level `parserOptions` property like this:
+- Atomic design: stories
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
+![Atomic design: stories](https://cupcake-ui-front.netlify.app/screenshots-storybook/02-atomic-design-stories.png)
+
+- Combobox storybook: default
+
+![Combobox storybook: default](https://cupcake-ui-front.netlify.app/screenshots-storybook/03-combobox-storybook-default.png)
+
+- Combobox storybook: open
+
+![Combobox storybook: open](https://cupcake-ui-front.netlify.app/screenshots-storybook/04-page-storybook-open.png)
+
+- Combobox storybook: select
+
+![Combobox storybook: select](https://cupcake-ui-front.netlify.app/screenshots-storybook/05-page-storybook-select.png)
+
+- Combobox storybook: search
+
+![Combobox storybook: search](https://cupcake-ui-front.netlify.app/screenshots-storybook/06-page-storybook-search.png)
+
+## Tech Stack
+
+**Client:** Typescript, React, React hooks, React Router, TailwindCSS, Storybook
+
+**Server:** Vite.js
+
+## Storybook
+
+- [Storybook: Github Page](https://alxmcr.github.io/ds-cupcake-ui)
+- [Cupcake UI - Storybook at Chromatic\*](https://66b1bf8878373c966dd1bcab-hrhfrvfedy.chromatic.com/)
+
+(\*) Chromatic: you need to create an account at [chromatic.com](https://www.chromatic.com/)
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your `.env` or `.env.local` file: `VITE_APP_PORT`
+
+**For example:**
+
+`VITE_APP_PORT=7012`
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/alxmcr/cupcake-ui
+```
+
+Go to the project directory
+
+```bash
+  cd cupcake-ui
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the storybook server
+
+```bash
+  npm run storybook
+
+  # http://localhost:6006/
+```
+
+Start the development server
+
+```bash
+  npm run dev
+
+  # http://localhost:<your_port>/
+```
+
+`<your_port>`: on enviroment variables (`.env`, `.env.local`).
+
+## Combobox in Action
+
+```tsx
+import { ComboBox } from '../../../components/03_organisms/ComboBox';
+import mockUsersData from '../../../mocks/data/sample-options-user.json';
+
+type Props = {
+  title: string;
+};
+
+export default function PageTemplateComboBox({ title = '' }: Props) {
+  return (
+    <div className="flex h-[500px] flex-col gap-4">
+      <h1 className="my-4 text-[20px]">{title}</h1>
+      <ComboBox
+        captionText="Solo podrás elegir a Victor para continuar."
+        id="ControlComboBox-Users"
+        labelText="Elige un usuario"
+        name="combobox-users"
+        options={mockUsersData}
+      />
+    </div>
+  );
 }
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+![Combobox in action](https://cupcake-ui-front.netlify.app/screenshots-using/02-combobox-in-action.png)
+
+## Discoveries
+
+(\*) Some comments left on Figma design.
+
+- Multiple color palette.
+- Different spacing: line-height and letter-spacing.
+- Research about more box-shadow best practices with Tailwind.
+- Reduce scope about scrollbar and styles definition.
+- Atomic design and naming conventions, we need some research about missing information
+
+## Next releases
+
+- Add more unit testing with React Testing Library.
+- Improve components considering a11y.
+- Enable on components i18n.
+- Tailwind customization.
+- Dark/Light mode.
+- Research, implement multibranding for multiple companies and customers.
+- Add more use cases about components built.
+- After more uses cases, work on integration testing.
+- Research about a customization developers documentation (on top Storybook)
+- Publish NPM package and GitHub Package.
+
+## Authors
+
+- [Alejandro M. Coca Rojas (@alxmcr)](https://www.github.com/alxmcr)
+
+## Feedback
+
+If you have any feedback, please reach out to us at amcocarojas@gmail.com.

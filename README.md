@@ -117,23 +117,25 @@ export default function PageTemplateComboBox({ title = '' }: Props) {
 
 ![Combobox in action](https://cupcake-ui-front.netlify.app/screenshots-using/02-combobox-in-action.png)
 
+![Combobox in action - video](https://cupcake-ui-front.netlify.app/recordings/01-combobox.mov)
+
 ## Discoveries
 
 (\*) Some comments left on Figma design.
 
-- Multiple color palette.
-- Different spacing: line-height and letter-spacing.
-- Research about more box-shadow best practices with Tailwind.
-- Reduce scope about scrollbar and styles definition.
-- Atomic design and naming conventions, we need some research about missing information
+- Multiple color palette - Follow TailwindCSS customization.
+- Different spacing: line-height and letter-spacing - Follow TailwindCS custom values.
+- Research about more box-shadow best practices with Tailwind - Work together inline CSS classes with default CSS classes on CSS files.
+- Reduce scope about scrollbar and styles definition - centralize the global styles to `tailwind.css`.
+- Atomic design and naming conventions - Methodology to help mem with a fast development, maintain, and reduce time to development.
 
-## Next releases
+## Next steps, next releases
 
 - Add more unit testing with React Testing Library.
-- Improve components considering a11y.
-- Enable on components i18n.
-- Tailwind customization.
-- Dark/Light mode.
+- Improve components considering web accessibility (a11y).
+- Enable on components with internationalization (i18n).
+- Apply more Tailwind.css customization.
+- Enable Dark/Light modes.
 - Research, implement multibranding for multiple companies and customers.
 - Add more use cases about components built.
 - After more uses cases, work on integration testing.

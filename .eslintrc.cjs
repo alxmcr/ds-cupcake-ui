@@ -8,8 +8,16 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:react-hooks/recommended', 'plugin:tailwindcss/recommended', 'plugin:storybook/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:tailwindcss/recommended',
+    'plugin:storybook/recommended',
+  ],
   overrides: [
     {
       env: {
@@ -31,7 +39,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react', 'react-refresh'],
+  plugins: ['@typescript-eslint', 'react', 'react-refresh', 'testing-library'],
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     'react-hooks/rules-of-hooks': 'error',
@@ -42,5 +50,10 @@ module.exports = {
     'no-void': 'error',
     '@typescript-eslint/explicit-function-return-type': 'off',
     'react/prop-types': 'off',
+    // testing-library
+    'testing-library/await-async-queries': 'error',
+    'testing-library/no-await-sync-queries': 'error',
+    'testing-library/no-debugging-utils': 'warn',
+    'testing-library/no-dom-import': 'off',
   },
 };

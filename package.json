@@ -14,7 +14,8 @@
     "typescript:check": "npx tsc --noEmit",
     "format": "npm run typescript:check && npm run prettier:fix && npm run lint:fix",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_aa40aa19d8a4c7d"
   },
   "dependencies": {
     "prettier": "^3.3.3",
@@ -38,6 +39,7 @@
     "@typescript-eslint/parser": "^8.0.1",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",
+    "chromatic": "^11.7.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
@@ -63,7 +65,9 @@
     "design-systems",
     "ui-components"
   ],
-  "author": "Alejandro M. Coca",
+  "author": {
+    "name": "Alejandro M. Coca"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alxmcr/ds-cupcake-ui/issues"

@@ -4,5 +4,12 @@
     "singleQuote": true,
     "printWidth": 120,
     "tabWidth": 2,
-    "trailingComma": "all"
+    "trailingComma": "all",
+    "plugins": [
+        "prettier-plugin-tailwindcss"
+    ],
+    "tailwindPreserveWhitespace": true,
+    "tailwindAttributes": [
+        "font-inter"
+    ]
 }

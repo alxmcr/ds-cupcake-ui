@@ -117,8 +117,6 @@ export default function PageTemplateComboBox({ title = '' }: Props) {
 
 ![Combobox in action](https://cupcake-ui-front.netlify.app/screenshots-using/02-combobox-in-action.png)
 
-![Combobox in action - video](https://cupcake-ui-front.netlify.app/recordings/01-combobox.mov)
-
 ## Discoveries
 
 (\*) Some comments left on Figma design.
